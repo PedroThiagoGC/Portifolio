@@ -64,10 +64,8 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
   },
   category: "technology",
-  icons: {
-    icon: "/brand/logo-icon.jpeg",
-    apple: "/brand/logo-icon.jpeg",
-  },
+  // Favicon e Apple touch icon vêm da convenção de arquivos do Next.js:
+  // src/app/icon.jpg e src/app/apple-icon.jpg (detectados automaticamente).
 };
 
 export default function RootLayout({
