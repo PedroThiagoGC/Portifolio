@@ -168,9 +168,13 @@ export default function Home() {
       {/* NAV */}
       <nav>
         <div className="logo">
-          <span className="logo-gm">GM</span>
-          <span className="logo-tech">Tech</span>
-          <span className="logo-dot" aria-hidden="true" />
+          <Image
+            src="/brand/logo-horizontal.jpeg"
+            alt="GM Tech Solution"
+            width={234}
+            height={44}
+            priority
+          />
         </div>
         <ul className="nav-links">
           <li>
@@ -521,7 +525,12 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <div className="footer-logo">
-          GM<span>Tech</span> Solution
+          <Image
+            src="/brand/logo-vertical.jpeg"
+            alt="GM Tech Solution"
+            width={146}
+            height={80}
+          />
         </div>
         <p className="footer-meta">
           Fortaleza, Ceará — © {year} GM Tech Solution. Todos os direitos
