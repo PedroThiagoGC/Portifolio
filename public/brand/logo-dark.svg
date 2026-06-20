@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="400" height="80" role="img" aria-label="GM Tech Solution">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap');</style>
+  </defs>
+  <text x="0" y="52" font-family="'JetBrains Mono',monospace" font-weight="600" font-size="40" fill="#070C15" letter-spacing="-2">//</text>
+  <text x="86" y="52" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="40" fill="#070C15" letter-spacing="-2">GMTech</text>
+  <text x="88" y="68" font-family="'JetBrains Mono',monospace" font-weight="400" font-size="11" fill="rgba(7,12,21,0.4)" letter-spacing="4">SOLUTION · FORTALEZA CE</text>
+</svg>
