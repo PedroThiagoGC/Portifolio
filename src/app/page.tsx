@@ -464,7 +464,7 @@ export default function Home() {
                 <div className="founder-avatar-wrap">
                   <div className="founder-avatar-inner">
                     {f.img ? (
-                      <Image src={f.img} alt={`Foto de ${f.name}`} width={110} height={110} style={{ objectFit: "cover" }} />
+                      <Image src={f.img} alt={`Foto de ${f.name}`} width={110} height={110} style={{ objectFit: "cover", objectPosition: "center 20%" }} />
                     ) : (
                       <span className="founder-initials">{f.initials}</span>
                     )}
