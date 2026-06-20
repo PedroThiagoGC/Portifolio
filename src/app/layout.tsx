@@ -51,8 +51,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: siteConfig.ogImage,
-        width: 1200,
-        height: 630,
+        width: 1024,
+        height: 559,
         alt: "GM Tech Solution — Tecnologia que move negócios",
       },
     ],

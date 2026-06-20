@@ -44,7 +44,7 @@ export const siteConfig = {
     "automação de processos",
     "GM Tech Solution",
   ],
-  ogImage: "/og-image.png",
+  ogImage: "/brand/brand-sheet.jpeg",
 } as const;
 
 export type SiteConfig = typeof siteConfig;

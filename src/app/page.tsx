@@ -166,7 +166,7 @@ export default function Home() {
       <LandingEffects />
 
       {/* NAV */}
-      <nav>
+      <nav aria-label="Navegação principal">
         <div className="logo">
           <Image
             src="/brand/logo-horizontal.jpeg"
@@ -197,6 +197,9 @@ export default function Home() {
           Falar agora
         </a>
       </nav>
+
+      {/* MAIN CONTENT */}
+      <main>
 
       {/* HERO */}
       <section className="hero">
@@ -521,6 +524,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      </main>
 
       {/* FOOTER */}
       <footer>
