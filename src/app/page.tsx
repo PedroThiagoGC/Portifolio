@@ -2,7 +2,7 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/site";
 import { StructuredData } from "@/components/StructuredData";
 import { LandingEffects } from "@/components/LandingEffects";
-import { WhatsAppIcon } from "@/components/icons";
+import { WhatsAppIcon, LinkedInIcon, GitHubIcon } from "@/components/icons";
 
 const WA = siteConfig.whatsapp;
 
@@ -126,6 +126,35 @@ const PORTFOLIO = [
   },
 ];
 
+const FOUNDERS = [
+  {
+    initials: "PM",
+    name: "Pedro Melo",
+    role: "Gerente de Projetos Tech & Líder Técnico",
+    location: "Fortaleza, CE",
+    bio: "Responsável por implantar o ciclo completo de desenvolvimento na PWR Gestão Tech, liderando squads e entregando múltiplos SaaS em produção — CRM, ERP industrial, agendamento clínico com IA. Combina liderança ágil com domínio técnico em integrações, automação e agentes inteligentes.",
+    tags: ["Scrum Master", "Product Owner", "LangChain / RAG", "APIs & Integrações", "React / Next.js", "IA Aplicada"],
+    socials: {
+      linkedin: "https://linkedin.com/in/pedrothiago-bmelo",
+      github: "https://github.com/pedrothiagogc",
+      whatsapp: "https://wa.me/5585994334597",
+    },
+  },
+  {
+    initials: "EG",
+    name: "Eric Galvão",
+    role: "Co-fundador & Desenvolvimento de Negócios",
+    location: "Fortaleza, CE",
+    bio: "Co-fundador da GM Tech Solution, responsável pela frente comercial e relacionamento com clientes. Atua na identificação de oportunidades, prospecção e construção de parcerias para levar tecnologia acessível a negócios locais em crescimento.",
+    tags: ["Desenvolvimento de Negócios", "Vendas Tech", "Parcerias", "Estratégia Comercial"],
+    socials: {
+      linkedin: null,
+      github: null,
+      whatsapp: "https://wa.me/5585994334597",
+    },
+  },
+] as const;
+
 export default function Home() {
   const year = new Date().getFullYear();
 
@@ -150,6 +179,9 @@ export default function Home() {
           </li>
           <li>
             <a href="#publico">Para quem</a>
+          </li>
+          <li>
+            <a href="#founders">Founders</a>
           </li>
           <li>
             <a href="#como">Como funciona</a>
@@ -406,6 +438,58 @@ export default function Home() {
                 </div>
                 <h3 className="step-title">{s.title}</h3>
                 <p className="step-desc">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FOUNDERS */}
+      <section className="founders" id="founders">
+        <div className="container">
+          <p className="section-label reveal">{"//"} Os bastidores</p>
+          <h2 className="section-title reveal">
+            Quem está por trás
+            <br />
+            da GM Tech
+          </h2>
+          <p className="section-sub reveal">
+            Dois profissionais de Fortaleza com projetos reais rodando em produção.
+          </p>
+          <div className="founders-grid">
+            {FOUNDERS.map((f) => (
+              <div className="founder-card reveal" key={f.name}>
+                <div className="founder-avatar-wrap">
+                  <div className="founder-avatar-inner">
+                    {/* Substituir por <img> quando a foto estiver disponível */}
+                    <span className="founder-initials">{f.initials}</span>
+                  </div>
+                </div>
+                <h3 className="founder-name">{f.name}</h3>
+                <div className="founder-role">{f.role}</div>
+                <div className="founder-location">📍 {f.location}</div>
+                <div className="founder-divider" />
+                <p className="founder-bio">{f.bio}</p>
+                <div className="founder-tags">
+                  {f.tags.map((t) => (
+                    <span className="tag" key={t}>{t}</span>
+                  ))}
+                </div>
+                <div className="founder-socials">
+                  {f.socials.linkedin ? (
+                    <a href={f.socials.linkedin} className="founder-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                      <LinkedInIcon />
+                    </a>
+                  ) : null /* a ser preenchido */}
+                  {f.socials.github ? (
+                    <a href={f.socials.github} className="founder-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                      <GitHubIcon />
+                    </a>
+                  ) : null /* a ser preenchido */}
+                  <a href={f.socials.whatsapp} className="founder-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <WhatsAppIcon />
+                  </a>
+                </div>
               </div>
             ))}
           </div>

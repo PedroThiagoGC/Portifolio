@@ -54,7 +54,7 @@ export function LandingEffects() {
     animRing();
 
     const hoverEls = document.querySelectorAll(
-      "a,.service-card,.browser,.audience-card",
+      "a,.service-card,.browser,.audience-card,.founder-card",
     );
     const enter = () => {
       ring.style.transform = "translate(-50%,-50%) scale(1.6)";
@@ -201,7 +201,7 @@ export function LandingEffects() {
 
     // 3D TILT
     const tiltEls = document.querySelectorAll<HTMLElement>(
-      ".service-card,.audience-card",
+      ".service-card,.audience-card,.founder-card",
     );
     const tiltHandlers: Array<{
       el: HTMLElement;
