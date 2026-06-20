@@ -129,8 +129,9 @@ const PORTFOLIO = [
 const FOUNDERS = [
   {
     initials: "PM",
+    img: "/founders/pedro.jpg",
     name: "Pedro Melo",
-    role: "Gerente de Projetos Tech & Líder Técnico",
+    role: "Co-fundador & Líder Técnico",
     location: "Fortaleza, CE",
     bio: "Responsável por implantar o ciclo completo de desenvolvimento na PWR Gestão Tech, liderando squads e entregando múltiplos SaaS em produção — CRM, ERP industrial, agendamento clínico com IA. Combina liderança ágil com domínio técnico em integrações, automação e agentes inteligentes.",
     tags: ["Scrum Master", "Product Owner", "LangChain / RAG", "APIs & Integrações", "React / Next.js", "IA Aplicada"],
@@ -142,6 +143,7 @@ const FOUNDERS = [
   },
   {
     initials: "EG",
+    img: null,
     name: "Eric Galvão",
     role: "Co-fundador & Desenvolvimento de Negócios",
     location: "Fortaleza, CE",
@@ -153,7 +155,7 @@ const FOUNDERS = [
       whatsapp: "https://wa.me/5585994334597",
     },
   },
-] as const;
+];
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -461,8 +463,11 @@ export default function Home() {
               <div className="founder-card reveal" key={f.name}>
                 <div className="founder-avatar-wrap">
                   <div className="founder-avatar-inner">
-                    {/* Substituir por <img> quando a foto estiver disponível */}
-                    <span className="founder-initials">{f.initials}</span>
+                    {f.img ? (
+                      <Image src={f.img} alt={`Foto de ${f.name}`} width={110} height={110} style={{ objectFit: "cover" }} />
+                    ) : (
+                      <span className="founder-initials">{f.initials}</span>
+                    )}
                   </div>
                 </div>
                 <h3 className="founder-name">{f.name}</h3>
