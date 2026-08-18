@@ -1,7 +1,8 @@
 import { siteConfig } from "@/lib/site";
 
 // JSON-LD para SEO: ProfessionalService (negócio local) + WebSite.
-// Ajuda o Google a entender que a GM Tech é uma empresa de tecnologia em Fortaleza.
+// Ajuda o Google a entender que a GM Tech é uma empresa de tecnologia em Fortaleza,
+// quem é o fundador e o tamanho do time.
 export function StructuredData() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -25,6 +26,18 @@ export function StructuredData() {
           addressCountry: siteConfig.country,
         },
         sameAs: [siteConfig.whatsapp],
+        alternateName: `${siteConfig.name} — ${siteConfig.meaning}`,
+        slogan: "Game Master da sua operação digital",
+        founder: {
+          "@type": "Person",
+          name: siteConfig.founder.name,
+          jobTitle: siteConfig.founder.role,
+          sameAs: [siteConfig.founder.linkedin, siteConfig.founder.github],
+        },
+        numberOfEmployees: {
+          "@type": "QuantitativeValue",
+          value: siteConfig.teamSize,
+        },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Soluções GM Tech",

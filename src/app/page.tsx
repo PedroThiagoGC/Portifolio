@@ -12,6 +12,7 @@ const TICKER = [
   "Tráfego Pago",
   "Sistema de Agendamento",
   "PDV Completo",
+  "Delivery White-Label",
   "E-commerce",
   "Checklist Operacional",
   "Controle Financeiro",
@@ -20,7 +21,7 @@ const TICKER = [
 ];
 
 const STATS = [
-  { count: 3, suffix: "+", label: "Projetos no ar hoje", color: "c-cyan" },
+  { count: 6, suffix: "+", label: "Projetos no ar hoje", color: "c-cyan" },
   { count: 48, suffix: "h", label: "Entrega de landing page", color: "c-green" },
   { count: 100, suffix: "%", label: "Personalizado por segmento", color: "c-purple" },
   { text: "CE", label: "Baseado em Fortaleza", color: "c-text" },
@@ -105,14 +106,15 @@ const STEPS = [
 
 const PORTFOLIO = [
   {
-    href: "https://www.fortalimp.com/",
-    url: "fortalimp.com",
-    img: "/portfolio/fortalimp.png",
-    alt: "Site da Fortalimp — desentupidora e limpa fossas em Fortaleza",
-    badge: { class: "badge-landing", label: "Landing Page" },
-    name: "Fortalimp",
-    desc: "Desentupidora e limpa fossas em Fortaleza. Landing com SEO local, galeria de serviços e depoimentos reais de clientes.",
-    link: "Ver site ao vivo →",
+    href: "https://brasa.gm-tech-solution.com",
+    url: "brasa.gm-tech-solution.com",
+    img: "/portfolio/gm-delivery.png",
+    alt: "GM Tech Delivery — plataforma de delivery white-label multi-tenant",
+    badge: { class: "badge-saas", label: "SaaS · Delivery white-label" },
+    name: "GM Tech Delivery",
+    desc: "Plataforma multi-tenant: cardápio digital com a marca da loja, checkout só com telefone (Pix, cartão ou dinheiro), painel de pedidos ao vivo, caixa, app do entregador com GPS e relatórios de venda.",
+    placeholder: null,
+    link: "Ver a demonstração →",
   },
   {
     href: "https://feitico.vercel.app/",
@@ -122,40 +124,126 @@ const PORTFOLIO = [
     badge: { class: "badge-saas", label: "SaaS · Agendamento" },
     name: "Feitiço Salão",
     desc: "Sistema de agendamento online premium para salão de beleza, com gestão de agenda, serviços e experiência de marca.",
+    placeholder: null,
     link: "Acessar plataforma →",
+  },
+  {
+    href: null,
+    url: "gm-tech-pdv-api.vercel.app",
+    img: null,
+    alt: "GM Tech PDV — ponto de venda para varejo",
+    badge: { class: "badge-pdv", label: "SaaS · PDV" },
+    name: "GM Tech PDV",
+    desc: "Ponto de venda completo com controle de estoque, caixa, relatórios gerenciais e multi-usuário para varejo. Sistema pronto — ambiente fora do ar no momento.",
+    placeholder: {
+      icon: "🖥️",
+      tag: "Deploy offline",
+      text: "Sistema pronto, ambiente sendo republicado",
+    },
+    link: null,
+  },
+  {
+    href: "https://www.fortalimp.com/",
+    url: "fortalimp.com",
+    img: "/portfolio/fortalimp.png",
+    alt: "Site da Fortalimp — desentupidora e limpa fossas em Fortaleza",
+    badge: { class: "badge-landing", label: "Landing Page" },
+    name: "Fortalimp",
+    desc: "Desentupidora e limpa fossas em Fortaleza. Landing com SEO local, galeria de serviços e depoimentos reais de clientes.",
+    placeholder: null,
+    link: "Ver site ao vivo →",
+  },
+  {
+    href: "https://desentupidora-disponivel.vercel.app",
+    url: "desentupidora-disponivel.vercel.app",
+    img: "/portfolio/desentupidora-disponivel.png",
+    alt: "Site da Desentupidora Disponível — desentupimento 24h em Fortaleza",
+    badge: { class: "badge-landing", label: "Landing Page" },
+    name: "Desentupidora Disponível",
+    desc: "Desentupimento 24h em Fortaleza e região metropolitana. Galeria com vídeos e fotos dos serviços, depoimentos, cobertura cidade por cidade e dois canais de WhatsApp.",
+    placeholder: null,
+    link: "Ver site ao vivo →",
+  },
+  {
+    href: "https://desentupidora-sem-problema.vercel.app",
+    url: "desentupidora-sem-problema.vercel.app",
+    img: "/portfolio/desentupidora-sem-problema.png",
+    alt: "Site da Desentupidora Sem Problemas — hidrojateamento em Fortaleza",
+    badge: { class: "badge-landing", label: "Landing Page" },
+    name: "Desentupidora Sem Problemas",
+    desc: "Desentupimento residencial e comercial com hidrojateamento de alta pressão. FAQ, galeria, depoimentos, cobertura de 17 cidades da região e conversão rastreada no Google Ads.",
+    placeholder: null,
+    link: "Ver site ao vivo →",
+  },
+  {
+    href: "https://hbzinho-web-lac.vercel.app",
+    url: "hbzinho-web-lac.vercel.app",
+    img: "/portfolio/hb-informatica.png",
+    alt: "Site da HB Informática — assistência técnica e redes corporativas em Fortaleza",
+    badge: { class: "badge-landing", label: "Institucional · Área do cliente" },
+    name: "HB Informática",
+    desc: "Assistência técnica, redes corporativas e consultoria de TI em Fortaleza. Site institucional com área do cliente, 2FA multi-dispositivo e chat de suporte.",
+    placeholder: null,
+    link: "Ver site ao vivo →",
+  },
+  {
+    href: null,
+    url: "consolida-eng-web.vercel.app",
+    img: null,
+    alt: "Site institucional da Consolida Engenharia",
+    badge: { class: "badge-soon", label: "Institucional · Em construção" },
+    name: "Consolida Engenharia",
+    desc: "Site institucional da Consolida — Engenharia de Solidez e Perenidade. Monorepo Turborepo com Next.js e o conteúdo centralizado em um pacote compartilhado.",
+    placeholder: {
+      icon: "🏗️",
+      tag: "Em construção",
+      text: "Em desenvolvimento, publicação em breve",
+    },
+    link: null,
   },
 ];
 
-const FOUNDERS = [
-  {
-    initials: "PM",
-    img: "/founders/pedro.jpg",
-    name: "Pedro Melo",
-    role: "Co-fundador & Diretor Comercial",
-    location: "Fortaleza, CE",
-    bio: "Responsável pela frente comercial e pelo crescimento da GM Tech Solution. Conduz o relacionamento com clientes, mapeia necessidades reais de negócio e garante que cada proposta entregue valor concreto — sem vender o que o cliente não precisa.",
-    tags: ["Direção Comercial", "Gestão de Projetos", "Product Owner", "Estratégia", "APIs & Integrações", "IA Aplicada"],
-    socials: {
-      linkedin: "https://linkedin.com/in/pedrothiago-bmelo",
-      github: "https://github.com/pedrothiagogc",
-      whatsapp: "https://wa.me/5585994334597",
-    },
+const FOUNDER = {
+  img: "/founders/pedro.jpg",
+  name: siteConfig.founder.name,
+  role: siteConfig.founder.role,
+  location: "Fortaleza, CE",
+  bio: "Fundador e CEO da GM Tech Solution. Conduz a empresa de ponta a ponta — do primeiro contato comercial à arquitetura das soluções entregues. Mapeia a dor real do negócio, desenha o produto, define a prioridade técnica e acompanha cada projeto até entrar em produção. Sem intermediário: quem fecha é quem responde pela entrega.",
+  tags: [
+    "Direção Executiva",
+    "Estratégia Comercial",
+    "Product Owner",
+    "Gestão de Projetos",
+    "Arquitetura de Sistemas",
+    "APIs & Integrações",
+    "IA Aplicada",
+  ],
+  socials: {
+    linkedin: siteConfig.founder.linkedin,
+    github: siteConfig.founder.github,
+    whatsapp: WA,
   },
-  {
-    initials: "EG",
-    img: null,
-    name: "Eric Galvão",
-    role: "Co-fundador & Líder Técnico",
-    location: "Fortaleza, CE",
-    bio: "Lidera a equipe de desenvolvimento e operações da GM Tech Solution. Responsável pela arquitetura dos sistemas, qualidade das entregas e evolução contínua dos produtos — do código ao deploy em produção.",
-    tags: ["Desenvolvimento Full Stack", "Liderança Técnica", "Arquitetura de Sistemas", "DevOps & Operações"],
-    socials: {
-      linkedin: null,
-      github: null,
-      whatsapp: "https://wa.me/5585994334597",
-    },
-  },
-];
+};
+
+const TEAM = {
+  size: 3,
+  title: "Equipe de desenvolvimento",
+  role: "3 desenvolvedores",
+  location: "Fortaleza, CE · Squad dedicado",
+  bio: "Time enxuto que sustenta a operação junto ao fundador: desenvolve, testa, publica e mantém tudo o que está no ar. Squad pequeno de propósito — decisão rápida, código revisado e nenhuma entrega parada esperando aprovação de comitê.",
+  roles: [
+    "Front-end & interfaces",
+    "Back-end, APIs & banco de dados",
+    "Infraestrutura, deploy & sustentação",
+  ],
+  tags: [
+    "React & Next.js",
+    "Node & APIs",
+    "PostgreSQL",
+    "Deploy & Monitoramento",
+    "Sustentação",
+  ],
+};
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -187,7 +275,7 @@ export default function Home() {
             <a href="#publico">Para quem</a>
           </li>
           <li>
-            <a href="#founders">Founders</a>
+            <a href="#founders">Time</a>
           </li>
           <li>
             <a href="#como">Como funciona</a>
@@ -225,6 +313,11 @@ export default function Home() {
         <p className="hero-sub">
           Da sua primeira presença online ao sistema de gestão completo — criamos
           a solução certa para o seu negócio, sem contrato de prateleira.
+        </p>
+
+        <p className="hero-meaning">
+          GM de <strong>Game Master</strong> — quem conduz o jogo, define as
+          regras e mantém a operação rodando.
         </p>
 
         <div className="hero-buttons">
@@ -320,77 +413,69 @@ export default function Home() {
             agora.
           </p>
           <div className="portfolio-grid">
-            {PORTFOLIO.map((p) => (
-              <a
-                href={p.href}
-                className="browser reveal"
-                target="_blank"
-                rel="noopener noreferrer"
-                key={p.href}
-              >
-                <div className="browser-bar">
-                  <div className="browser-dots" aria-hidden="true">
-                    <div className="browser-dot bd-red" />
-                    <div className="browser-dot bd-yellow" />
-                    <div className="browser-dot bd-green" />
+            {PORTFOLIO.map((p) => {
+              const inner = (
+                <>
+                  <div className="browser-bar">
+                    <div className="browser-dots" aria-hidden="true">
+                      <div className="browser-dot bd-red" />
+                      <div className="browser-dot bd-yellow" />
+                      <div className="browser-dot bd-green" />
+                    </div>
+                    <div className="browser-url">{p.url}</div>
                   </div>
-                  <div className="browser-url">{p.url}</div>
-                </div>
-                <div className="browser-screen">
-                  <Image
-                    src={p.img}
-                    alt={p.alt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 380px"
-                  />
-                </div>
-                <div className="browser-info">
-                  <span className={`browser-badge ${p.badge.class}`}>
-                    {p.badge.label}
-                  </span>
-                  <h3 className="browser-name">{p.name}</h3>
-                  <p className="browser-desc">{p.desc}</p>
-                  <span className="browser-link">{p.link}</span>
-                </div>
-              </a>
-            ))}
+                  <div className="browser-screen">
+                    {p.img ? (
+                      <Image
+                        src={p.img}
+                        alt={p.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 380px"
+                      />
+                    ) : (
+                      <div className="screen-placeholder">
+                        <div
+                          className="screen-placeholder-icon"
+                          aria-hidden="true"
+                        >
+                          {p.placeholder?.icon}
+                        </div>
+                        <div className="screen-placeholder-tag">
+                          {p.placeholder?.tag}
+                        </div>
+                        <div className="screen-placeholder-text">
+                          {p.placeholder?.text}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <div className="browser-info">
+                    <span className={`browser-badge ${p.badge.class}`}>
+                      {p.badge.label}
+                    </span>
+                    <h3 className="browser-name">{p.name}</h3>
+                    <p className="browser-desc">{p.desc}</p>
+                    {p.link ? <span className="browser-link">{p.link}</span> : null}
+                  </div>
+                </>
+              );
 
-            {/* GM PDV — print em breve */}
-            <a
-              href="https://gm-tech-pdv-api.vercel.app/login"
-              className="browser reveal"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="browser-bar">
-                <div className="browser-dots" aria-hidden="true">
-                  <div className="browser-dot bd-red" />
-                  <div className="browser-dot bd-yellow" />
-                  <div className="browser-dot bd-green" />
+              return p.href ? (
+                <a
+                  href={p.href}
+                  className="browser reveal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={p.name}
+                >
+                  {inner}
+                </a>
+              ) : (
+                <div className="browser browser-static reveal" key={p.name}>
+                  {inner}
                 </div>
-                <div className="browser-url">gm-tech-pdv-api.vercel.app</div>
-              </div>
-              <div className="browser-screen">
-                <div className="pdv-placeholder">
-                  <div className="pdv-placeholder-icon" aria-hidden="true">
-                    🖥️
-                  </div>
-                  <div className="pdv-placeholder-tag">Print em breve</div>
-                  <div className="pdv-placeholder-text">
-                    Envie o print do PDV e ele aparece aqui automaticamente
-                  </div>
-                </div>
-              </div>
-              <div className="browser-info">
-                <span className="browser-badge badge-pdv">SaaS · PDV</span>
-                <h3 className="browser-name">GM Tech PDV</h3>
-                <p className="browser-desc">
-                  Ponto de venda completo com controle de estoque, caixa,
-                  relatórios gerenciais e multi-usuário para varejo.
-                </p>
-                <span className="browser-link">Acessar sistema →</span>
-              </div>
-            </a>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -453,7 +538,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOUNDERS */}
+      {/* FOUNDER & TEAM */}
       <section className="founders" id="founders">
         <div className="container">
           <p className="section-label reveal">{"//"} Os bastidores</p>
@@ -463,47 +548,106 @@ export default function Home() {
             da GM Tech
           </h2>
           <p className="section-sub reveal">
-            Dois profissionais de Fortaleza com projetos reais rodando em produção.
+            Um fundador à frente de tudo e um squad de três desenvolvedores
+            sustentando cada projeto que já está em produção.
           </p>
+
+          <div className="brand-meaning reveal">
+            <span className="brand-meaning-chip" aria-hidden="true">
+              GM
+            </span>
+            <p className="brand-meaning-text">
+              <strong>Game Master</strong> — quem conduz o jogo, define as regras
+              e mantém a operação rodando. É assim que tratamos cada cliente:
+              assumimos o comando da operação digital e respondemos pelo
+              resultado.
+            </p>
+          </div>
+
           <div className="founders-grid">
-            {FOUNDERS.map((f) => (
-              <div className="founder-card reveal" key={f.name}>
-                <div className="founder-avatar-wrap">
-                  <div className="founder-avatar-inner">
-                    {f.img ? (
-                      <Image src={f.img} alt={`Foto de ${f.name}`} width={110} height={110} style={{ objectFit: "cover", objectPosition: "center 20%" }} />
-                    ) : (
-                      <span className="founder-initials">{f.initials}</span>
-                    )}
-                  </div>
-                </div>
-                <h3 className="founder-name">{f.name}</h3>
-                <div className="founder-role">{f.role}</div>
-                <div className="founder-location">📍 {f.location}</div>
-                <div className="founder-divider" />
-                <p className="founder-bio">{f.bio}</p>
-                <div className="founder-tags">
-                  {f.tags.map((t) => (
-                    <span className="tag" key={t}>{t}</span>
-                  ))}
-                </div>
-                <div className="founder-socials">
-                  {f.socials.linkedin ? (
-                    <a href={f.socials.linkedin} className="founder-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                      <LinkedInIcon />
-                    </a>
-                  ) : null /* a ser preenchido */}
-                  {f.socials.github ? (
-                    <a href={f.socials.github} className="founder-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                      <GitHubIcon />
-                    </a>
-                  ) : null /* a ser preenchido */}
-                  <a href={f.socials.whatsapp} className="founder-social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <WhatsAppIcon />
-                  </a>
+            <div className="founder-card reveal">
+              <div className="founder-avatar-wrap">
+                <div className="founder-avatar-inner">
+                  <Image
+                    src={FOUNDER.img}
+                    alt={`Foto de ${FOUNDER.name}`}
+                    width={110}
+                    height={110}
+                    style={{ objectFit: "cover", objectPosition: "center 20%" }}
+                  />
                 </div>
               </div>
-            ))}
+              <h3 className="founder-name">{FOUNDER.name}</h3>
+              <div className="founder-role">{FOUNDER.role}</div>
+              <div className="founder-location">📍 {FOUNDER.location}</div>
+              <div className="founder-divider" />
+              <p className="founder-bio">{FOUNDER.bio}</p>
+              <div className="founder-tags">
+                {FOUNDER.tags.map((t) => (
+                  <span className="tag" key={t}>
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <div className="founder-socials">
+                <a
+                  href={FOUNDER.socials.linkedin}
+                  className="founder-social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <LinkedInIcon />
+                </a>
+                <a
+                  href={FOUNDER.socials.github}
+                  className="founder-social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <GitHubIcon />
+                </a>
+                <a
+                  href={FOUNDER.socials.whatsapp}
+                  className="founder-social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                >
+                  <WhatsAppIcon />
+                </a>
+              </div>
+            </div>
+
+            <div className="founder-card team-card reveal">
+              <div className="team-avatar-cluster" aria-hidden="true">
+                {Array.from({ length: TEAM.size }).map((_, i) => (
+                  <span className="team-avatar" key={i}>
+                    {"</>"}
+                  </span>
+                ))}
+              </div>
+              <h3 className="founder-name">{TEAM.title}</h3>
+              <div className="founder-role">{TEAM.role}</div>
+              <div className="founder-location">📍 {TEAM.location}</div>
+              <div className="founder-divider" />
+              <p className="founder-bio">{TEAM.bio}</p>
+              <ul className="team-roles">
+                {TEAM.roles.map((r) => (
+                  <li className="team-role" key={r}>
+                    {r}
+                  </li>
+                ))}
+              </ul>
+              <div className="founder-tags">
+                {TEAM.tags.map((t) => (
+                  <span className="tag" key={t}>
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -537,6 +681,7 @@ export default function Home() {
             height={80}
           />
         </div>
+        <p className="footer-meaning">GM · Game Master</p>
         <p className="footer-meta">
           Fortaleza, Ceará — © {year} GM Tech Solution. Todos os direitos
           reservados.

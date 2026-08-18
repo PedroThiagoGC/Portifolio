@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "GM Tech Solution — Tecnologia que resolve de verdade",
+    title: "GM Tech Solution — Game Master da sua operação digital",
     description: siteConfig.description,
     images: [
       {
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GM Tech Solution — Tecnologia que resolve de verdade",
+    title: "GM Tech Solution — Game Master da sua operação digital",
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },

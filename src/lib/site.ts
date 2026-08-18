@@ -31,7 +31,7 @@ export const siteConfig = {
     "Oi, vi o site e quero saber mais sobre as soluções da GM Tech!",
   )}`,
   description:
-    "GM Tech Solution: presença digital profissional (landing pages, Google Maps e tráfego pago) e sistemas sob medida (agendamento, PDV, e-commerce, controle financeiro) em Fortaleza, CE. Sistema no ar em 48h.",
+    "GM Tech Solution — GM de Game Master: assumimos o comando da sua operação digital. Presença digital profissional (landing pages, Google Maps e tráfego pago) e sistemas sob medida (agendamento, PDV, delivery, e-commerce, controle financeiro) em Fortaleza, CE. Sistema no ar em 48h.",
   keywords: [
     "desenvolvimento de sites Fortaleza",
     "landing page que converte",
@@ -43,7 +43,17 @@ export const siteConfig = {
     "software sob medida",
     "automação de processos",
     "GM Tech Solution",
+    "GM Tech Solution Game Master",
+    "plataforma de delivery white-label",
   ],
+  meaning: "Game Master",
+  founder: {
+    name: "Pedro Melo",
+    role: "CEO & Fundador",
+    linkedin: "https://linkedin.com/in/pedrothiago-bmelo",
+    github: "https://github.com/pedrothiagogc",
+  },
+  teamSize: 4, // fundador + 3 desenvolvedores
   ogImage: "/brand/brand-sheet.jpeg",
 } as const;
 
