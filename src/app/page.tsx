@@ -21,7 +21,7 @@ const TICKER = [
 ];
 
 const STATS = [
-  { count: 6, suffix: "+", label: "Projetos no ar hoje", color: "c-cyan" },
+  { count: 7, suffix: "+", label: "Projetos no ar hoje", color: "c-cyan" },
   { count: 48, suffix: "h", label: "Entrega de landing page", color: "c-green" },
   { count: 100, suffix: "%", label: "Personalizado por segmento", color: "c-purple" },
   { text: "CE", label: "Baseado em Fortaleza", color: "c-text" },
@@ -187,19 +187,15 @@ const PORTFOLIO = [
     link: "Ver site ao vivo →",
   },
   {
-    href: null,
-    url: "consolida-eng-web.vercel.app",
-    img: null,
-    alt: "Site institucional da Consolida Engenharia",
+    href: "https://consolida-eng.gm-tech-solution.com/",
+    url: "consolida-eng.gm-tech-solution.com",
+    img: "/portfolio/consolida-eng.png",
+    alt: "Site da Consolida — engenharia de recuperação e reforço de estruturas em concreto armado",
     badge: { class: "badge-soon", label: "Institucional · Em construção" },
     name: "Consolida Engenharia",
-    desc: "Site institucional da Consolida — Engenharia de Solidez e Perenidade. Monorepo Turborepo com Next.js e o conteúdo centralizado em um pacote compartilhado.",
-    placeholder: {
-      icon: "🏗️",
-      tag: "Em construção",
-      text: "Em desenvolvimento, publicação em breve",
-    },
-    link: null,
+    desc: "Site institucional da Consolida — Engenharia de Solidez e Perenidade. Monorepo Turborepo com Next.js 16, conteúdo centralizado em um pacote compartilhado e domínio próprio. No ar, em fase de refinamento de conteúdo.",
+    placeholder: null,
+    link: "Ver site ao vivo →",
   },
 ];
 
