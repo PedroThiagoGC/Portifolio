@@ -1,0 +1,71 @@
+import { PostHeader } from "@/components/PostHeader";
+import { PostFooter } from "@/components/PostFooter";
+
+export const metadata = {
+  title: "PDV para pequeno varejo",
+  description:
+    "Os sinais de que o controle manual já está custando dinheiro, e o que um ponto de venda precisa ter antes de você trocar de sistema.",
+  alternates: { canonical: "/blog/pdv-para-pequeno-varejo" },
+  openGraph: {
+    title: "PDV para pequeno varejo | GM Tech Solution",
+    description:
+      "Quando a planilha para de dar conta e o que avaliar em um ponto de venda.",
+    url: "/blog/pdv-para-pequeno-varejo",
+  },
+};
+
+<PostHeader slug="pdv-para-pequeno-varejo" />
+
+Quase todo varejo pequeno começa no caderno ou na planilha, e por um tempo isso é a decisão certa: custa pouco, todo mundo entende e o dono está no balcão vendo tudo. O problema não é o caderno em si. É que ele registra a venda e nada mais — e é o "nada mais" que começa a sair caro.
+
+## Os cinco sinais de que já passou da hora
+
+**1. Você descobre o furo de estoque só no inventário.** Se a diferença entre o que deveria ter e o que tem aparece uma vez por mês, você passou o mês inteiro decidindo compra com número errado.
+
+**2. O fechamento de caixa não bate e ninguém sabe onde.** Sem registro de cada movimento com hora e usuário, a diferença vira discussão em vez de investigação.
+
+**3. Você não sabe o que mais vende.** Não o que você acha que vende: o dado. Sem isso, a compra é feita por intuição e o capital fica parado em prateleira errada.
+
+**4. Só uma pessoa sabe operar.** Se quem controla a planilha entra de férias e a operação claudica, o risco já é operacional, não administrativo.
+
+**5. Você trabalha duas vezes.** Vende no caderno, digita na planilha à noite, confere no fim de semana. Esse é o custo mais invisível de todos, porque ele não aparece em nenhuma linha de despesa — sai do seu tempo.
+
+## O que um PDV precisa ter
+
+**Baixa de estoque no ato da venda.** É a função que justifica o sistema. A venda e o estoque precisam ser o mesmo movimento, não dois registros que alguém reconcilia depois.
+
+**Abertura e fechamento de caixa com conferência.** Valor de abertura, movimentos por forma de pagamento, valor conferido no fechamento e a diferença explícita. É isso que transforma "faltou dinheiro" em "faltou nesta gaveta, neste turno".
+
+**Usuários com permissão separada.** O balcão vende. O gerente cancela, dá desconto e vê relatório. Quando todos usam o mesmo login, você perde a capacidade de auditar — e a de proteger a equipe de acusação injusta.
+
+**Relatório que responde pergunta de dono.** O que vendeu mais, qual margem, qual forma de pagamento domina, qual dia da semana rende. Relatório que só mostra total do dia não ajuda a decidir nada.
+
+**Funcionamento com internet ruim.** Balcão não pode parar porque a conexão caiu. Vale perguntar isso explicitamente antes de contratar qualquer coisa.
+
+**Cadastro de produto que cabe na sua realidade.** Se cadastrar item novo dá trabalho, o operador vai vender tudo como "diversos" e você volta ao ponto de partida.
+
+## O que costuma ser vendido a mais
+
+Leitor de código de barras, gaveta, impressora fiscal e balança são acessórios: fazem sentido conforme o tipo de loja, não por padrão. Comece pelo que resolve o controle e adicione hardware quando a operação pedir.
+
+Módulo de nota fiscal é assunto separado, e depende do seu regime tributário e da orientação da sua contabilidade — decida isso com quem cuida do seu fiscal, não com quem vende o software.
+
+## Pronto por assinatura ou sob medida
+
+O sistema pronto começa hoje e serve muito bem a quem tem uma operação convencional. O ponto de atenção é o modelo de cobrança: licença por usuário ou por terminal encarece exatamente quando você abre o segundo ponto.
+
+Sob medida faz sentido em três casos. Quando o seu processo tem regra própria que nenhum sistema pronto acomoda — venda por peso combinada com pacote, comissão por vendedor com regra específica, controle de encomenda. Quando o PDV precisa conversar com o que você já usa. E quando você quer que o dado seja seu, sem depender de exportação limitada de fornecedor.
+
+Foi o caso do [GM Tech PDV](/projetos/gm-tech-pdv), que construímos com baixa automática de estoque, caixa com conferência, acesso multiusuário por perfil e relatório gerencial.
+
+## Como migrar sem fechar a loja
+
+1. **Cadastre o estoque com contagem física.** Migrar número errado é migrar o problema.
+2. **Comece por um terminal.** Um caixa no sistema novo, o resto seguindo como está, por alguns dias.
+3. **Treine no horário fraco.** Ninguém aprende sistema novo na fila de sábado.
+4. **Confira o fechamento nos primeiros dias.** Caixa do sistema contra dinheiro na gaveta, todo dia, até bater sem esforço.
+5. **Só então desligue o controle antigo.** Rodar em paralelo custa uma semana de trabalho dobrado e evita meses de retrabalho.
+
+O retorno de um PDV não aparece como economia direta na fatura. Aparece em compra melhor decidida, em furo de estoque que não acontece e no tempo que volta para você.
+
+<PostFooter slug="pdv-para-pequeno-varejo" />
