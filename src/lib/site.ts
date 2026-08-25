@@ -25,6 +25,9 @@ export const siteConfig = {
   city: "Fortaleza",
   region: "CE",
   country: "BR",
+  // Data da última alteração real de conteúdo — alimenta o lastmod do sitemap.
+  // Fixa de propósito: new Date() mudaria a cada build e viraria sinal ruidoso.
+  contentUpdatedAt: "2026-08-25",
   phoneDisplay: "(85) 99433-4597",
   phoneE164: "+5585994334597",
   whatsapp: `https://wa.me/${phoneDigits}?text=${encodeURIComponent(
@@ -55,6 +58,21 @@ export const siteConfig = {
   },
   teamSize: 4, // fundador + 3 desenvolvedores
   ogImage: "/brand/brand-sheet.jpeg",
+  logo: "/brand/logo-vertical.jpeg",
+  // Coordenadas de Fortaleza — usadas no nó geo do JSON-LD de negócio local.
+  geo: { latitude: -3.7319, longitude: -38.5267 },
+  citiesServed: [
+    "Fortaleza",
+    "Eusébio",
+    "Maracanaú",
+    "Caucaia",
+    "Região Metropolitana de Fortaleza",
+  ],
+  openingHours: {
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "08:00",
+    closes: "18:00",
+  },
 } as const;
 
 export type SiteConfig = typeof siteConfig;

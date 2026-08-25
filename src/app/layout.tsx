@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { CtaSection } from "@/components/CtaSection";
+import { DeferredEffects } from "@/components/DeferredEffects";
+import { FloatWhatsApp } from "@/components/FloatWhatsApp";
+import { PageEffects } from "@/components/PageEffects";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteNav } from "@/components/SiteNav";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -13,6 +19,11 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
+  // Fonte secundária (labels e typewriter): fora do preload para não disputar
+  // o caminho crítico com a Inter, que é a fonte do texto principal.
+  // Efeito só observável no build de produção — o build local no Windows não
+  // popula o next-font-manifest, então nenhum preload de fonte é emitido aqui.
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -27,9 +38,9 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.name,
   applicationName: siteConfig.name,
-  alternates: {
-    canonical: "/",
-  },
+  // Sem alternates.canonical aqui de propósito: metadata de layout é herdada,
+  // e um canonical fixo apontaria toda subpágina para a home. Cada rota
+  // declara o seu (caminho relativo, resolvido pelo metadataBase).
   robots: {
     index: true,
     follow: true,
@@ -75,7 +86,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <DeferredEffects />
+        <PageEffects />
+        <SiteNav />
+        <main>
+          {children}
+          <CtaSection />
+        </main>
+        <SiteFooter />
+        <FloatWhatsApp />
+      </body>
     </html>
   );
 }
