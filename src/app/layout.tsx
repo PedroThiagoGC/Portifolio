@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import { CtaSection } from "@/components/CtaSection";
 import { DeferredEffects } from "@/components/DeferredEffects";
 import { FloatWhatsApp } from "@/components/FloatWhatsApp";
@@ -13,17 +13,6 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-  // Fonte secundária (labels e typewriter): fora do preload para não disputar
-  // o caminho crítico com a Inter, que é a fonte do texto principal.
-  // Efeito só observável no build de produção — o build local no Windows não
-  // popula o next-font-manifest, então nenhum preload de fonte é emitido aqui.
-  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -85,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="pt-BR" className={inter.variable}>
       <body>
         <DeferredEffects />
         <PageEffects />
